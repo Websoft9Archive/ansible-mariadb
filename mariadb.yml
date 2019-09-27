@@ -48,8 +48,8 @@
     - { role: common , tags: "common"}  
     - {role: mariadb, tags: "mariadb"}
     - {role: random, tags: "random"}
-    # - {role: docker, tags: "docker"}
-    # - {role: docker_phpmyadmin, tags: "docker_phpmyadmin"}
+    - {role: docker, tags: "docker"}
+    - {role: docker_phpmyadmin, tags: "docker_phpmyadmin"}
 
 
 
