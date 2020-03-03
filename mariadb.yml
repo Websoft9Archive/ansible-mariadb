@@ -1,60 +1,53 @@
-# 本地同步公共Roles
-- name: mariadb
-  hosts: local
-  connection: local
-  gather_facts: False
-  pre_tasks:
-    - name: Set Git Repo
-      shell: |
-        git init
-        git config core.sparsecheckout true
-        git remote add origin https://github.com/Websoft9/ansible-roles.git
-        echo {{ item }} >> .git/info/sparse-checkout
-      args:
-        chdir: roles
-      with_items:
-        - "{{ public_roles }}"
-
-    - name: GET Public Roles
-      git:
-        repo: https://github.com/Websoft9/ansible-roles.git
-        dest: roles
-        clone: no
-
-    - name: Delete .git
-      file:
-        path: roles/.git
-        state: absent
-
-# 服务器前置任务(ubuntu使用)
-- name: mariadb
-  hosts: mariadb
-  become: yes
-  become_method: sudo
-  gather_facts: False
-  pre_tasks:
-   - name: Install Python
-     raw: sudo apt update && sudo apt-get -y install python
-  ignore_errors: yes
-
-
 # 核心任务
-
-- name: mariadb
-  hosts: mariadb
+- name: MariaDB
+  hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - { role: common , tags: "common"}  
-    - {role: mariadb, tags: "mariadb"}
-    - {role: random, tags: "random"}
-    - {role: docker, tags: "docker"}
-    - {role: docker_phpmyadmin, tags: "docker_phpmyadmin"}
+  gather_facts: True
 
+  vars_files:
+    - vars/main.yml
 
+  vars_prompt:
+    - name: 'mariadb_selection'
+      prompt: "\nPlease choose the number for MySQL version [ 1/2/3/4] \n\n
+      1: MariaDB10.1\n
+      2: MariaDB10.2\n
+      3: MariaDB10.3\n
+      4: MariaDB10.4\n"
+      private: no
+      default: 3
 
+    - name: 'phpmyadmin_selection'
+      prompt: "\nDo you want to install phpMyAdmin of Docker? [ 1/2 ] \n\n
+      1: Yes\n
+      2: No\n"
+      private: no
+      default: 1
 
+  vars:
+    mariadb_select:
+      '1': '5.5'
+      '2': '5.6'
+      '3': '5.7'
+      '4': '8.0'
+    mariadb_version: "{{mariadb_select[mariadb_selection]}}" 
+
+    phpmyadmin_select:
+      '1': True
+      'y': True
+      '2': ''
+      'n': ''
+      
     
-
-
-                                                                                                    
+    phpmyadmin_install_docker: "{{phpmyadmin_select[phpmyadmin_selection]}}" 
+  
+  
+  roles:
+   - {role: role_common, tags: "role_common"}   
+   - {role: role_cloud, tags: "role_cloud"}
+   - {role: role_mariadb, tags: "role_mariadb"}
+   - {role: role_docker, tags: "role_docker", when: phpmyadmin_install_docker}
+   - {role: role_docker_phpmyadmin, tags: "role_docker_phpmyadmin", when: phpmyadmin_install_docker}
+   - {role: role_init_password, tags: "role_init_password"}
+   - {role: role_end, tags: "role_end"} 

@@ -1,0 +1,5 @@
+mariadb_root_password: "123456"
+init_db: 
+  mariadb:
+    user: root
+    password: "123456"
