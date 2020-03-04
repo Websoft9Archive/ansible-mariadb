@@ -44,11 +44,11 @@ wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/i
 1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
 2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
 
-多种原因导致无法顺利安装，请使用我们在公有云上发布的 [MariaDB 镜像](https://apps.websoft9.com/MariaDB) 的部署方式
+多种原因导致无法顺利安装，请使用我们在公有云上发布的 [MariaDB 镜像](https://apps.websoft9.com/mariadb) 的部署方式
 
 ## 文档
 
-文档链接：https://support.websoft9.com/docs/MariaDB/zh
+文档链接：https://support.websoft9.com/docs/mariadb/zh
 
 ## FAQ
 
