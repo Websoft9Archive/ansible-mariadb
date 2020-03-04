@@ -20,9 +20,9 @@
 
 
     - name: 'mariadb_remote_selection'
-      prompt: "\nDo you want to enable remote authority of MariaDB?\n\n
-      1: Yes\n
-      2: No\n"
+      prompt: "\nDo you want to enable MariaDB remote connection? [ 1/2 ] \n\n
+      1: Enable remote connection(default)\n
+      2: Disable remote connection\n"
       private: no
       default: 1
 
@@ -41,19 +41,20 @@
       '4': '10.4'
     mariadb_version: "{{mariadb_select[mariadb_selection]}}" 
 
-    mariadb_remote_select:
+    remote_select:
       '1': True
       'y': True
       '2': ''
       'n': ''
-    mariadb_remote: "{{mariadb_remote_select[mariadb_remote_selection]}}"
 
     phpmyadmin_select:
       '1': True
       'y': True
       '2': ''
       'n': ''
+
     phpmyadmin_install_docker: "{{phpmyadmin_select[phpmyadmin_selection]}}" 
+    mariadb_remote: "{{remote_select[remote_selection]}} or {{phpmyadmin_select[phpmyadmin_selection]}}" 
   
   
   roles:
