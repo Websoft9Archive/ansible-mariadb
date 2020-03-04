@@ -1,4 +1,5 @@
 mariadb_root_password: "123456"
+mariadb_remote: True
 init_db: 
   mariadb:
     user: root

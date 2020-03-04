@@ -10,13 +10,21 @@
 
   vars_prompt:
     - name: 'mariadb_selection'
-      prompt: "\nPlease choose the number for MySQL version [ 1/2/3/4] \n\n
+      prompt: "\nPlease choose the number for MariaDB version [ 1/2/3/4] \n\n
       1: MariaDB10.1\n
       2: MariaDB10.2\n
       3: MariaDB10.3\n
       4: MariaDB10.4\n"
       private: no
       default: 3
+
+
+    - name: 'mariadb_remote_selection'
+      prompt: "\nDo you want to enable remote authority of MariaDB?\n\n
+      1: Yes\n
+      2: No\n"
+      private: no
+      default: 1
 
     - name: 'phpmyadmin_selection'
       prompt: "\nDo you want to install phpMyAdmin of Docker? [ 1/2 ] \n\n
@@ -33,13 +41,18 @@
       '4': '10.4'
     mariadb_version: "{{mariadb_select[mariadb_selection]}}" 
 
+    mariadb_remote_select:
+      '1': True
+      'y': True
+      '2': ''
+      'n': ''
+    mariadb_remote: "{{mariadb_remote_select[mariadb_remote_selection]}}"
+
     phpmyadmin_select:
       '1': True
       'y': True
       '2': ''
       'n': ''
-      
-    
     phpmyadmin_install_docker: "{{phpmyadmin_select[phpmyadmin_selection]}}" 
   
   
