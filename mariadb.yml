@@ -55,14 +55,13 @@
 
     phpmyadmin_install_docker: "{{phpmyadmin_select[phpmyadmin_selection]}}" 
     mariadb_remote: "{{remote_select[remote_selection]}} or {{phpmyadmin_select[phpmyadmin_selection]}}" 
-  
+
   
   roles:
    - {role: role_common, tags: "role_common"}   
    - {role: role_cloud, tags: "role_cloud"}
    - {role: role_mariadb, tags: "role_mariadb"}
    - {role: role_docker, tags: "role_docker", when: phpmyadmin_install_docker}
-   - {role: role_docker_phpmyadmin, tags: "role_docker_phpmyadmin", when: phpmyadmin_install_docker}
    - {role: role_init_password, tags: "role_init_password"}
    - {role: role_preend, tags: "role_preend"}
    - {role: role_end, tags: "role_end"} 
