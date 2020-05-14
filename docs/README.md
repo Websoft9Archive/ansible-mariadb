@@ -1,0 +1,1 @@
+[Englinsh](https://github.com/Websoft9/ansible-mysql/blob/master/docs/stack-components.md) | [中文](https://github.com/Websoft9/ansible-mysql/blob/master/docs/zh/stack-components.md)

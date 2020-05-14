@@ -21,7 +21,7 @@
 
 包含的核心组件为：MariaDB(10.1/10.2/10.3/10.4 版本可选安装)，phpMyAdmin on Docker（可选安装项）
 
-更多请见[参数表](/docs/zh/stack-components.md)
+更多请见[参数表](/docs/readme.md)
 
 ## 本项目安装的是 MariaDB 最新版吗？
 
