@@ -6,5 +6,4 @@ docker_applications:
 init_db: 
   mariadb:
     admin: root
-    user: 
     password: "123456"
