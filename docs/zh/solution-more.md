@@ -41,3 +41,34 @@ Some times, there a lot of event for your database, then the binary log file siz
 Suggest you change the expire_logs_day to more smaller if you binary log file size is too big
 
 ## 权限设置
+
+待续...
+
+## 重置密码
+
+常用的 MariaDB 重置密码相关的操作主要有修改密码和找回密码两种类型：
+
+### 修改密码
+
+可以通过 MariaDB 可视化管理工具修改密码，也通过命令行修改密码
+
+* 通过 phpMyAdmin 修改密码
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
+
+* 通过命令行修改密码
+   ```
+   mysqladmin -u 用户名 -p 旧密码 password '新密码' 
+   ```
+
+### 找回密码
+
+如果忘记了 root 密码，就需要通过命令操作，实现MariaDB密码重置。  
+
+为了用户使用方便，我们已经将 MariaDB 重置密码写成脚本，使用只需两步：
+
+1. 使用SSH远程连接到 MariaDB 服务器
+2. 运行如下命令，按提示输入新密码即可。
+   ```
+   sudo su -
+   wget -N https://raw.githubusercontent.com/websoft9dev/role_mariadb/master/tools/reset_password.sh; bash reset_password.sh
+   ```

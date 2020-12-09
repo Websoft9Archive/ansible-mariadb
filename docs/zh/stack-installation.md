@@ -22,6 +22,10 @@
 2. 运行服务状态查询命令，MariaDB 正常运行会得到 " Active: active (running)... " 的反馈
 
 3. 镜像安装完成后，MariaDB就可以使用了。
+   ```
+   # 查看使用 MariaDB 使用手册
+   man mariadb
+   ```
 
 ### 连接 MariaDB
 

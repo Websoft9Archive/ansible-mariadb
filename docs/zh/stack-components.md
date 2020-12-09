@@ -11,10 +11,9 @@ MariaDB 安装到 Linux 还是 Windows 系统，对应的路径有很大的差�
 #### MariaDB
 
 MariaDB 配置文件: */etc/my.cnf*   
-MariaDB 数据目录：*/data/mysql*   
-MariaDB 日志文件: */var/log/mysql/mysqld.log*   
-MariaDB PIN: */run/mysqld/mysqld.pid*   
-MariaDB Socket: */var/lib/mysql/mysql.sock*
+MariaDB 数据目录：*/data/mariadb*   
+MariaDB 错误日志: */data/mariadb/mariadb.err*  
+MariaDB Socket: */data/mariadb/mariadb.sock*
 
 #### phpMyAdmin
 

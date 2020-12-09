@@ -17,13 +17,10 @@ module.exports = [
     collapsable: false,
     children: [
       '/zh/solution-study',
-      '/zh/solution-password',
       '/zh/solution-remote',
       '/zh/solution-phpmyadmin',
-      '/zh/solution-jspmyadmin',
       '/zh/solution-navicat',
       '/zh/solution-workbench',
-      '/zh/solution-mysqlfront',
       '/zh/solution-backup',
       '/zh/solution-upgrade',
       '/zh/solution-more',

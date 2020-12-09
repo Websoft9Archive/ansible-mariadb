@@ -1,5 +1,7 @@
 # MariaDB管理要点
 
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-structure-websoft9.png)
+
 对于 MariaDB 管理员来说，需要掌握的知识要点包括：
 
 * MariaDB 安装
@@ -75,3 +77,5 @@ MariaDB 开发无疑博大精深，在我们工作过程中，最常见的要点
 ## 优化技术
 
 ## 安全技术
+
+## MariaDB vs MySQL
