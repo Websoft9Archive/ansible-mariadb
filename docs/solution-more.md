@@ -81,3 +81,33 @@ mysql> FLUSH PRIVILEGES;
 
 
 > Prior to MariaDB 5.7, when you installed MariaDB, it included a test database by default. This database is only used for testing, but all users who can connect to MariaDB have almost all the permissions of the test library, so there are certain security risks. From an information security perspective, if you find that you have the test database in MariaDB, be sure to remove it.
+
+
+## Resetting Password
+
+There are two main measures to reset password.
+
+### Changing password
+
+You can modify password by MariaDB GUI or commands:
+
+* Method One: use phpMyAdmin to modify password (Recommend) 
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
+
+* Method Two: Use commands to modify password
+   ```
+   mysqladmin -u root -p oldpassword password 'newpassword' 
+   ```
+
+### Forgot Password
+
+Try to retrieve your password through if you have forgotten password.  
+
+We have develop a script for you to retrieve password, just one step:
+
+1. Use your SFTP or SSH to connect MariaDB to Server
+2. Run the following script as root user of Linux
+   ```
+   sudo su -
+   wget -N https://raw.githubusercontent.com/websoft9dev/role_mariadb/master/tools/reset_password.sh; bash reset_password.sh
+   ```

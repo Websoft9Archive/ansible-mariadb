@@ -4,24 +4,24 @@ phpMyAdmin is a very popular MariaDB database management tool. The following des
 
 ### Log in to phpMyAdmin
 
-1. Open Chrome or Firefox on your local PC to visit the _phpMyAdmin_,you can enter the login page  
+1. Open you local Chrome or Firefox to access **phpMyAdmin**, you can enter the login page  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png)
-2. Select you language, Username is `root`,Password should get from the Chapter"[Administrator usenames and password](stack-accounts)"
-3. Click the button "Go"
+
+2. Select you language, login as **root** user ([Don's know password?](stack-accounts))
 
 ### Modify the root password
 
-1. Login to phpMyAdmin, you can see the "Modify the password" link in dashboard page, then click it
+1. Login to phpMyAdmin, you can see the 【Modify the password】 link in dashboard page, then click it
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-changepwds-websoft9.png)
 
 2. After the modification of password, exit phpMyAdmin and refresh the log in page to restart it
 
 ### Add new database
 
-1. Login to phpMyAdmin, click "New" in the left menu to start creating a new database
+1. Login to phpMyAdmin, click 【New】 in the left menu to start creating a new database
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-createdb-websoft9.png)
 
-2. Fill in the suitable Database Name, select the character coding, then click "Create" button to complete this step
+2. Fill in the Database Name, select character coding, and click 【Create】 button to start it
 
 ### Add user account
 

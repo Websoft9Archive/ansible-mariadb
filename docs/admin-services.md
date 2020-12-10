@@ -6,24 +6,11 @@ These commands you must know when you using the MariaDB of Websoft9
 
 ### MariaDB
 ```shell
-#For CentOS&Redhat
-sudo systemctl start mysqld
-sudo systemctl restart mysqld
-sudo systemctl stop mysqld
-sudo systemctl status mysqld
+sudo systemctl start mariadb
+sudo systemctl stop mariadb
+sudo systemctl restart mariadb
+sudo systemctl status mariadb
 
-#For Ubuntu&Debian
-sudo systemctl start mysql
-sudo systemctl restart mysql
-sudo systemctl stop mysql
-sudo systemctl status mysql
-```
-
-### MariaDB
-```shell
-systemctl start mariadb
-systemctl stop mariadb
-systemctl restart mariadb
 ```
 
 ### Docker

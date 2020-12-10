@@ -32,7 +32,7 @@ themeConfig: {
   sidebar: 'auto', // 默认值：false
 
   //Github 
-  repo: 'Websoft9/ansible-mysql',
+  repo: 'Websoft9/ansible-mariadb',
   editLinks: true,
   docsDir: 'docs',
   docsBranch: 'main',

@@ -6,19 +6,19 @@ The password is stored in the server related file: `/credentials/password.txt`
 
 #### Is there a web-base GUI database management tools?
 
-Yes, phpMyAdmin is on it, visit by *http://Server Internet IP:9090*
+Yes, phpMyAdmin is on it, visit by *http://Server's Internet IP:9090*
 
 #### Can I connect MariaDB from Internet(remote)?
 
-You should enable the remote connection first
+You should [enable the remote connection](/zh/solution-remote.md) first
 
 #### How to get the status of MariaDB?
 
-Run command `ps ``-``ef ``| grep mysqld` to list mysql process
+Run command `ps ``-``ef ``| grep mariadb` to list MySQL process
 
 #### Can I modify the root directory of MariaDB?
 
-Yes, please refer the documentation [Modify MariaDB Data Directory](/solution-more.html#modify-mysql-data-directory)
+Yes, please refer the documentation [Modify MariaDB Data Directory](/solution-more.html#modify-mariadb-data-directory)
 
 #### What's the difference between Deployment and Installation?
 

@@ -49,11 +49,14 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Export database by phpMyAdmin or other GUI tools
+1. Export database by mysqldump
+   ```
+   mysqldump -uroot -p databasename>databasename.sql
+   ```
 2. Download it to local computer
 3. Backup completed
 
-In phpMyAdmin, Export is to back up the database, import and restore the database.
+You can also use phpMyAdmin for backup&restore, Export is to back up the database, import and restore the database.
 
 #### Export
 

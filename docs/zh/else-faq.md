@@ -1,5 +1,11 @@
 # FAQ
 
+#### MariaDB 是完全免费的吗？
+
+MariaDB Community Server   是免费开源版，MariaDB Enterprise Server 是收费开源版  
+
+详情[对比参考](https://mariadb.com/pricing/)
+
 #### 单台服务器上是否可以安装多个 MariaDB实例？
 
 理论上可以，但实际上不建议
@@ -25,18 +31,20 @@ MariaDB Server 是指 MariaDB 程序本体，而 MariaDB Client 指采用TCP协�
 
 有，内置phpMyAdmin
 
-#### 如何禁止外界访问phpMyAdmin？
+#### 如何停止 phpMyAdmin？
 
-连接服务器，编辑 [phpMyAdmin 配置文件](/zh/stack-components.md#phpmyadmin)，将其中的 `Require all granted` 更改为 `Require ip 192.160.1.0`，然后重启 Apache 服务
+停止 phpMyAdmin 容器即可：
+
+```
+sudo docker stop phpmyadmin
+```
 
 #### 如何自定义 MariaDB 错误日志文件路径？
 
-配置文件中增加下面的参数即可
+修改配置文件中下面的参数即可
 ```
-log-error=/data/mysql/log.err
+log-error=/data/mariadb/log.err
 ```
-
-
 
 #### 部署和安装有什么区别？
 

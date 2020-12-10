@@ -3,34 +3,26 @@
 The MariaDB deployment package contains a sequence software (referred to as "components") required for MariaDB to run. The important information such as the component name, installation directory path, configuration file path, port, version, etc. are listed below.
 
 ## Path
+
 You should know the components is different for different OS before using MariaDB
 
 ### Linux
 
 #### MariaDB&MariaDB
 
-MariaDB install directory: */usr/share/mysql*  
-MariaDB data directory: */data/mysql*  
-MariaDB Configuration File: */etc/my.cnf*  
-MariaDB error log: */var/log/mysql/mysqld.log*  
-MariaDB Process Identification Number: */run/mysqld/mysqld.pid*  
-MariaDB Socket: */var/lib/mysql/mysql.sock*  
+MariaDB data directory: */data/mariadb*  
+MariaDB configuration file: */etc/my.cnf*  
+MariaDB error log: */data/mariadb/mariadb.err*  
+MariaDB Socket: */data/mariadb/mariadb.sock*  
 
 #### phpMyAdmin on Docker
 
-Most of time, we used Docker to install phpMyAdmin
+phpMyAdmin is a visual MySQL management tool, is installed based on docker.  
 
-#### phpMyAdmin on PHP
-
-For php runtime, e.g LAMP/LNMP, phpMyAdmin is an application for deployment   
-
-phpMyAdmin installation directory: */data/apps/phpmyadmin*  
-phpMyAdmin configuration file: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin vhost configuration file: */etc/httpd/conf.d/phpMyAdmin.conf*   
+phpMyAdmin directory：*/data/apps/phpmyadmin*  
+phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml* 
 
 ### Windows Sever
-
-#### MariaDB&MariaDB
 
 Database install directory: */C:/websoft9/mysql*  
 Database data directory: */C:/websoft9/mysql/data*  
@@ -39,14 +31,15 @@ Database configuration file: */C:/websoft9/mysql/my.ini*
 
 ## Ports
 
-You can control(open or shut down) ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/tech-instance.html)** of your Cloud Server whether the port can be accessed from Internet.
+Open or close ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/tech-instance.html)** of your Cloud Server to decide whether the port can be accessed from Internet.  
 
-These ports should be opened for this application:
+You can run the cmd `netstat -tunlp` to check all related ports.  
+
+The following are the ports you may use:
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
 | phpMyAdmin on Docker | 9090 | HTTP to visit phpMyAdmin | Optional |
-| MariaDB | 3306 | remote connect MariaDB | Optional |
 | MariaDB | 3306 | remote connect MariaDB | Optional |
 
 ## Version
@@ -61,7 +54,7 @@ sudo cat /data/logs/install_version.txt
 lsb_release -a
 
 # MariaDB version
-mysql -V
+MariaDB -V
 
 # MariaDB Version
 docker -v

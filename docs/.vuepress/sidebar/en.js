@@ -16,13 +16,9 @@ module.exports = [
         collapsable: false,
         children: [
           '/solution-study',
-          '/solution-password',
           '/solution-remote',
           '/solution-phpmyadmin',
-          '/solution-jspmyadmin',
           '/solution-navicat',
-          '/solution-workbench',
-          '/solution-mysqlfront',
           '/solution-backup',
           '/solution-upgrade',
           '/solution-more',

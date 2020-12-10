@@ -34,8 +34,6 @@ There are large differences between database distribution versions, which cannot
 
 ### On Windows
 
-### On Windows
-
 MariaDB upgrade on Windows Server divided into two parts
 
 1. Use Windows Update to upgrade Windows System

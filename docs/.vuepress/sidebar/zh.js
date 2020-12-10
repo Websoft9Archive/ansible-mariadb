@@ -20,7 +20,6 @@ module.exports = [
       '/zh/solution-remote',
       '/zh/solution-phpmyadmin',
       '/zh/solution-navicat',
-      '/zh/solution-workbench',
       '/zh/solution-backup',
       '/zh/solution-upgrade',
       '/zh/solution-more',
