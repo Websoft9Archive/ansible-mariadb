@@ -1,7 +1,5 @@
 # CHANGELOG
 
-
-
 ## To do
 
 1. 
@@ -14,5 +12,5 @@
 
 ### Features
 
-* 改写项目
+* create documentation of MariaDB, detach from MySQL  ocumentation
 
