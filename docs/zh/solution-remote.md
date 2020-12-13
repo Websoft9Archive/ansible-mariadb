@@ -1,4 +1,4 @@
-# 设置 MariaDB 远程访问
+# 远程访问
 
 当你想通过本地的电脑的MariaDB客户端（例如：Navicat）连接服务器上的MariaDB的时候，就需要设置 MariaDB 的远程访问。
 
