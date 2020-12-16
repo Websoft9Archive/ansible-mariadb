@@ -6,9 +6,9 @@ MariaDB Community Server   是免费开源版，MariaDB Enterprise Server 是收
 
 详情[对比参考](https://mariadb.com/pricing/)
 
-#### 单台服务器上是否可以安装多个 MariaDB实例？
+#### 单台服务器上是否可以安装多个 MariaDB 实例？
 
-理论上可以，但实际上不建议
+支持，但实际上不建议
 
 #### 什么是 MariaDB 的 Client 和 Server？
 
