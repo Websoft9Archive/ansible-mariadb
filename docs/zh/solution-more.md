@@ -69,6 +69,5 @@ Suggest you change the expire_logs_day to more smaller if you binary log file 
 1. 使用SSH远程连接到 MariaDB 服务器
 2. 运行如下命令，按提示输入新密码即可。
    ```
-   sudo su -
    wget -N https://raw.githubusercontent.com/websoft9dev/role_mariadb/master/tools/reset_password.sh; bash reset_password.sh
    ```
