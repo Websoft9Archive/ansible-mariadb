@@ -10,11 +10,11 @@
 
   vars_prompt:
     - name: 'mariadb_selection'
-      prompt: "\nPlease choose the number for MariaDB version [ 1/2/3/4] \n\n
+      prompt: "\nPlease choose the number for MariaDB version [ 1/2/3/4/5] \n\n
       1: MariaDB10.1\n
       2: MariaDB10.2\n
       3: MariaDB10.3\n
-      4: MariaDB10.4\n"
+      4: MariaDB10.4\n
       5: MariaDB10.5\n"
       private: no
       default: 3
